@@ -11,7 +11,7 @@ search.addEventListener('click', function() {
             .then(data => {
                 if (data.Response === "True") {
                     let imdbID = data.imdbID;
-                    let embedURL = `https://vidsrc.to/embed/movie/${imdbID}`;
+                    let embedURL = `https://vidsrc.cc/v2/embed/movie/${imdbID}`;
                     movie.innerHTML = `<iframe class="box" src="${embedURL}" frameborder="0" allowfullscreen></iframe>`;
                 } else {
                     movie.innerHTML = `<p>${data.Error}</p>`;
